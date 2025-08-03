@@ -72,6 +72,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -82,6 +83,8 @@ body {
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -207,6 +210,11 @@ a {
     
     @media (min-width: 768px) {
       padding: 0 var(--space-6);
+    }
+    
+    @media (max-width: 767px) {
+      padding: 0 var(--space-3);
+      gap: var(--space-2);
     }
   }
   
@@ -1232,6 +1240,116 @@ a {
   .btn--large {
     width: 100%;
     justify-content: center;
+  }
+  
+  // Mobile navigation adjustments
+  .nav {
+    &__container {
+      padding: 0 var(--space-2);
+      overflow: hidden;
+    }
+    
+    &__brand {
+      gap: var(--space-2);
+      flex-shrink: 1;
+      min-width: 0;
+    }
+    
+    &__logo-text {
+      .logo__astrophysics {
+        font-size: 0.9rem;
+      }
+      
+      .logo__data-system {
+        font-size: 0.65rem;
+      }
+    }
+    
+    &__scix-logo {
+      .scix-logo {
+        height: 20px;
+      }
+    }
+  }
+  
+  // Mobile button adjustments
+  .btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  // Prevent horizontal scrolling
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 0 var(--space-3);
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  // Ensure video section doesn't overflow
+  .video-section {
+    &__player {
+      margin: 0 calc(-1 * var(--space-3));
+      border-radius: 0;
+    }
+  }
+  
+  // Ensure images don't overflow
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  // Table and wide content responsive handling
+  .advocacy__stats {
+    gap: var(--space-3);
+  }
+  
+  .impact__grid {
+    gap: var(--space-4);
+  }
+}
+
+// Extra small mobile devices
+@media (max-width: 480px) {
+  .nav {
+    &__container {
+      padding: 0 var(--space-2);
+    }
+    
+    &__brand {
+      gap: var(--space-1);
+    }
+    
+    &__logo-text {
+      .logo__astrophysics {
+        font-size: 0.8rem;
+      }
+      
+      .logo__data-system {
+        font-size: 0.6rem;
+      }
+    }
+    
+    &__scix-logo {
+      .scix-logo {
+        height: 18px;
+      }
+    }
+  }
+  
+  .btn {
+    padding: var(--space-1) var(--space-3);
+    font-size: 0.7rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-2);
   }
 }
 
