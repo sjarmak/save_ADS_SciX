@@ -1376,9 +1376,42 @@ a {
   }
   
   // Ensure impact cards don't overflow
-  .impact__description {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  .impact {
+    &__grid {
+      gap: var(--space-3);
+      grid-template-columns: 1fr;
+    }
+    
+    &__card {
+      padding: var(--space-3);
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    &__title {
+      font-size: var(--font-size-base);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    
+    &__description {
+      font-size: var(--font-size-xs);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      line-height: 1.4;
+    }
+    
+    &__icon {
+      margin-bottom: var(--space-2);
+      
+      .material-icons-outlined {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
