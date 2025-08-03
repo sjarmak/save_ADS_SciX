@@ -870,7 +870,119 @@ a {
 }
 
 // ============================================================================
-// TESTIMONIAL SECTION
+// TESTIMONIALS SECTION
+// ============================================================================
+
+.testimonials {
+  padding: var(--space-20) 0;
+  background-color: var(--color-navy);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+    opacity: 0.95;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section__title {
+    color: var(--color-white);
+    margin-bottom: var(--space-16);
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-10);
+    }
+  }
+  
+  &__card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+    }
+    
+    @media (min-width: 768px) {
+      padding: var(--space-10);
+    }
+  }
+  
+  &__quote {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text);
+    font-style: italic;
+    margin: 0 0 var(--space-8) 0;
+    text-align: center;
+    position: relative;
+    
+    @media (min-width: 768px) {
+      font-size: var(--font-size-xl);
+      line-height: 1.6;
+    }
+  }
+  
+  &__author {
+    text-align: center;
+    position: relative;
+    
+    &::before {
+      content: '';
+      width: 60px;
+      height: 2px;
+      background-color: var(--color-orange);
+      position: absolute;
+      top: -var(--space-4);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  &__author-info {
+    padding-top: var(--space-4);
+  }
+  
+  &__name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: var(--space-2);
+  }
+  
+  &__credentials {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.4;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+// ============================================================================
+// TESTIMONIAL FORM SECTION
 // ============================================================================
 
 .testimonial {
