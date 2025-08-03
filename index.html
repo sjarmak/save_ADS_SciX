@@ -25,6 +25,7 @@
                 </div>
             </div>
             <ul class="nav__menu">
+                <li><a href="#video" class="nav__link">Video</a></li>
                 <li><a href="#impact" class="nav__link">Impact</a></li>
                 <li><a href="#products" class="nav__link">Products</a></li>
                 <li><a href="#help" class="nav__link">How to Help</a></li>
@@ -38,7 +39,7 @@
     <section class="hero" id="hero">
         <div class="hero__container">
             <div class="hero__content">
-                <h1 class="hero__title">NASA ADS/SciX faces a critical funding cut</h1>
+                <h1 class="hero__title">NASA ADS/SciX Needs Your Support</h1>
                 <p class="hero__subtitle">
                     NASA's critical research infrastructure connecting the global space and Earth science ecosystem 
                     faces budget cuts that threaten mission data discovery and research collaboration worldwide.
@@ -50,6 +51,29 @@
             </div>
             <div class="hero__visual">
                 <!-- Visual content removed for cleaner design -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2 class="section__title">Why ADS/SciX Matters</h2>
+            <div class="video-section__content">
+                <div class="video-section__player">
+                    <!-- Frame.io embed will go here -->
+                    <iframe 
+                        src="https://embed.frame.io/player/68f0e848-9359-4536-8b35-b378a9dfa737?media_id=53865833-a8b2-49b6-aaa0-5f880f436dd7&version_id=58fe1924-4efc-45e5-b324-5410fdd6248e"
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        title="ADS/SciX Impact Video">
+                    </iframe>
+                </div>
+                <div class="video-section__description">
+                    <p>Hear directly from researchers about how NASA's ADS/SciX has transformed their work and why continued funding is critical for the global scientific community.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -117,46 +141,91 @@
     <section class="impact" id="impact">
         <div class="container">
             <h2 class="section__title">What We Stand to Lose</h2>
-            <div class="impact__grid">
-                <div class="impact__card">
-                    <div class="impact__icon">
-                        <span class="material-icons-outlined">hub</span>
+            <div class="impact__main-grid">
+                <div class="impact__cards">
+                    <div class="impact__grid">
+                        <div class="impact__card">
+                            <div class="impact__icon">
+                                <span class="material-icons-outlined">auto_awesome</span>
+                            </div>
+                            <h3 class="impact__title">Expert Literature Curation</h3>
+                            <p class="impact__description">
+                                Expert curation and publisher partnerships providing full-text access for enhanced discovery across Earth and space sciences.
+                            </p>
+                        </div>
+                        <div class="impact__card">
+                            <div class="impact__icon">
+                                <span class="material-icons-outlined">hub</span>
+                            </div>
+                            <h3 class="impact__title">NASA Ecosystem Hub</h3>
+                            <p class="impact__description">
+                                ADS/SciX connects the full NASA space and Earth science ecosystem, linking mission data, 
+                                research outputs, and software across all NASA science divisions and global partnerships.
+                            </p>
+                        </div>
+                        <div class="impact__card">
+                            <div class="impact__icon">
+                                <span class="material-icons-outlined">satellite</span>
+                            </div>
+                            <h3 class="impact__title">Mission Data Discovery</h3>
+                            <p class="impact__description">
+                                Critical infrastructure for discovering and accessing data from NASA missions like 
+                                Hubble, Webb, Kepler, TESS, and Earth observation satellites, maximizing scientific return on investment.
+                            </p>
+                        </div>
+                        <div class="impact__card">
+                            <div class="impact__icon">
+                                <span class="material-icons-outlined">policy</span>
+                            </div>
+                            <h3 class="impact__title">Government Research ROI</h3>
+                            <p class="impact__description">
+                                Enables discoverability of taxpayer-funded research outputs from NASA, NSF, DoE, and international 
+                                agencies, ensuring maximum scientific and societal impact from public investments.
+                            </p>
+                        </div>
+                        <div class="impact__card">
+                            <div class="impact__icon">
+                                <span class="material-icons-outlined">network_node</span>
+                            </div>
+                            <h3 class="impact__title">Global Science Network</h3>
+                            <p class="impact__description">
+                                Serves 47 million users worldwide, connecting researchers across institutions and nations. 
+                                Loss of the ambassador program expansion would severely impact global outreach and training.
+                            </p>
+                        </div>
+                        <div class="impact__card">
+                            <div class="impact__icon">
+                                <span class="material-icons-outlined">play_circle</span>
+                            </div>
+                            <h3 class="impact__title">Community Resources</h3>
+                            <p class="impact__description">
+                                Comprehensive video tutorials and community content showcasing how SciX serves researchers across disciplines.
+                            </p>
+                            <a href="https://www.youtube.com/@SciXCommunity" target="_blank" class="btn btn--primary" style="margin-top: var(--space-4);">Watch Videos</a>
+                        </div>
                     </div>
-                    <h3 class="impact__title">NASA Ecosystem Hub</h3>
-                    <p class="impact__description">
-                        ADS/SciX connects the full NASA space and Earth science ecosystem, linking mission data, 
-                        research outputs, and software across all NASA science divisions and global partnerships.
-                    </p>
                 </div>
-                <div class="impact__card">
-                    <div class="impact__icon">
-                        <span class="material-icons-outlined">satellite</span>
+                <div class="impact__blog">
+                    <h3 class="impact__blog-title">Learn More</h3>
+                    <div class="blog__cards">
+                        <a href="https://scixplorer.org/scixblog/what-i-wish-i-knew-about-ads-scix-during-my-phd" target="_blank" class="blog__card">
+                            <span class="material-icons-outlined">school</span>
+                            <h4>What I Wish I Knew About ADS/SciX During My PhD</h4>
+                        </a>
+                        <a href="https://scixplorer.org/scixblog/scix-earth-science-literature-review" target="_blank" class="blog__card">
+                            <span class="material-icons-outlined">public</span>
+                            <h4>SciX Earth Science Literature Review</h4>
+                        </a>
+                        <a href="https://scixplorer.org/scixblog/scix-ambassador-workshop" target="_blank" class="blog__card">
+                            <span class="material-icons-outlined">groups</span>
+                            <h4>SciX Ambassador Workshop</h4>
+                        </a>
+                        <a href="https://scixplorer.org/scixblog/scix-advisory-board" target="_blank" class="blog__card">
+                            <span class="material-icons-outlined">diversity_3</span>
+                            <h4>SciX Advisory Board</h4>
+                        </a>
                     </div>
-                    <h3 class="impact__title">Mission Data Discovery</h3>
-                    <p class="impact__description">
-                        Critical infrastructure for discovering and accessing data from NASA missions like 
-                        Hubble, Webb, Kepler, TESS, and Earth observation satellites, maximizing scientific return on investment.
-                    </p>
-                </div>
-                <div class="impact__card">
-                    <div class="impact__icon">
-                        <span class="material-icons-outlined">policy</span>
-                    </div>
-                    <h3 class="impact__title">Government Research ROI</h3>
-                    <p class="impact__description">
-                        Enables discoverability of taxpayer-funded research outputs from NASA, NSF, DoE, and international 
-                        agencies, ensuring maximum scientific and societal impact from public investments.
-                    </p>
-                </div>
-                <div class="impact__card">
-                    <div class="impact__icon">
-                        <span class="material-icons-outlined">network_node</span>
-                    </div>
-                    <h3 class="impact__title">Global Science Network</h3>
-                    <p class="impact__description">
-                        Serves 47 million users worldwide, connecting researchers across institutions, nations, 
-                        and disciplines to accelerate discovery and foster international scientific collaboration.
-                    </p>
+                    <a href="https://scixplorer.org/scixblog/" target="_blank" class="btn btn--secondary">View All Blog Posts</a>
                 </div>
             </div>
         </div>
@@ -356,17 +425,17 @@
                         </div>
                     </div>
                     <p class="footer__description">
-                        This site is maintained by the ADS/SciX Team at the Center for Astrophysics | Harvard & Smithsonian
+                        This site is maintained by the former Planetary Science Project Scientist of the ADS/SciX Team
                     </p>
                 </div>
                 <div class="footer__links">
-                    <a href="https://ui.adsabs.harvard.edu">ADS/SciX Main Site</a>
+                    <a href="https://ui.adsabs.harvard.edu">ADS Main Site</a>
+                    <a href="https://scixplorer.org">SciX Main Site</a>
                     <a href="https://ui.adsabs.harvard.edu/help/">Privacy</a>
                     <a href="https://ui.adsabs.harvard.edu/help/accessibility/">Accessibility</a>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2024 NASA Astrophysics Data System. All rights reserved.</p>
             </div>
         </div>
     </footer>
